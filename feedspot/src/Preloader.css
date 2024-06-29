@@ -1,0 +1,25 @@
+.preloaderdiv {
+    background: #c5e0dc;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    display: fixed;
+    position: absolute;
+    z-index: 20;
+}
+.logocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.logo {
+    fill: #0b486b;
+}
+.logo-back {
+    fill: rgba(11, 72, 107, .08);
+}

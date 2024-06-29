@@ -1,0 +1,102 @@
+.navbar {
+  position: fixed; /* or absolute */
+  top: -10%; /* Initially off-screen */
+  width: 100%;
+  background: #fff; /* Add background color */
+  transition: top 0.3s ease-in-out; /* Optional: smooth transition */
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add a shadow for better visibility */
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+.logo{
+  margin-left: 10px;
+}
+.navbar .buttons{
+ right: 0;
+  padding-right: 9rem;
+ /* margin-right: 10px; */
+ position: absolute;
+ display: flex;
+ justify-content: space-between;
+ gap: 10px;
+ font-family: "Old Standard TT";
+}
+a{
+  text-decoration:none
+}
+.container{
+  z-index: 1;
+}
+.blocks-container{
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.row{
+  flex: 1;
+  width:100%;
+  display: flex;
+}
+
+.block {
+  position: relative;
+  flex:1;
+  background: #7FFFD4;
+  margin: -0.25px;
+}
+
+.transition-in .block{
+  transform-origin: top;
+  z-index: 11;
+}
+
+.transition-out .block {
+  transform-origin: bottom;
+  z-index: 11;
+}
+
+.slide-in{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+}
+
+.slide-out{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  background: #0f0f0f;
+  transform-origin: top;
+  
+}
+
+@keyframes slideMask {
+  from {
+    x: -100%;
+  }
+  to {
+    x: 100%;
+  }
+}
+
+.mask-rect {
+  animation: slideMask 3s ease infinite;
+}
